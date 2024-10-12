@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoveVolunteer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#home" class="navbar-logo">
+        <img src="/img/Logo Movers.png" alt="Logo MoveVolunteer" />
+        Move<span>Volunteer</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="/page html/about.html">About Us</a>
+        <a href="#activity">Activity</a>
+        <a href="#documentation">Documentation</a>
+        <a href="#location&contact">Contact</a>
+      </div>
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <section id="home" class="home">
+      <img class="imgslide" src="/img/IMG20231223094517.jpg" alt="MV" />
+      <img class="imgslide" src="/img/IMG_1165.jpg" alt="MV" />
+      <img class="imgslide" src="/img/IMG_20240204_133939.jpg" alt="MV" />
+      <div class="content">
+        <h1>Selamat Datang<br /><span>Movers</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          beatae nihil hic, incidunt temporibus exercitationem dolores impedit,
+          odio, sint sequi unde deserunt delectus optio tempora. Mollitia
+          accusantium iusto sapiente hic?
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="slideshow-container">
+        <!-- Tombol navigasi -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <div class="dotbox" style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <!-- <div class="dotbox" style="text-align: center">
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div> -->
+    </section>
+
+    <!-- About Section start -->
+    <section id="about" class="about">
+      <h2><span>About</span> Us</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <img src="/img/about us1.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Tujuan Move Volunteer Malang</h3>
+          <p>
+            "Mewujudkan Kota Malang yang inklusif dan mendukung bagi orangtua dan anak dengan disabilitas adalah
+            inti dari misi Move Volunteer Malang. Kami berkomitmen untuk menyediakan dukungan komprehensif melalui 
+            layanan pendampingan, edukasi, dan advokasi. Dengan program-program kami, kami tidak hanya memperjuangkan 
+            inklusi sosial yang efektif, tetapi juga menghapus stigma dan diskriminasi terhadap disabilitas di masyarakat. 
+            Bersama-sama, kami membangun jembatan menuju kesempatan yang lebih luas dan kesejahteraan bagi semua."
+          </p>
+          <a href="/page html/about.html">Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- My JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+:root {
+  --primary: #e6e6e6;
+  --second: #7716bc;
+  --bg: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary);
+  color: #fff;
+  height: 1000vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(25, 4, 41, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar img {
+  width: 3rem;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-logo span {
+  color: var(--second);
+}
+
+nav .navbar-nav a {
+  font-size: 1.3rem;
+  display: inline-block;
+  margin: 0 1rem;
+  color: #ffffff;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--second);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--second);
+  transform: scaleX(0);
+  transition: 0.2 linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--second);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.about-header {
+  position: relative;
+  height: 65vh; /* Tinggi 50% dari viewport */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Mengatur overflow agar tidak keluar dari header */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mengatur gambar agar sesuai dengan ukuran container */
+  filter: blur(5px); /* Efek blur 5px pada gambar */
+}
+
+.overlay {
+  position: relative; /* Mengatur posisi relatif agar tetap di atas gambar blur */
+  z-index: 1; /* Membuat teks tetap berada di depan */
+  text-align: center;
+  /* margin-top: 10vh; */
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Medai Queries */
+
+/*Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+}
+/*Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+/*Mobile Phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
